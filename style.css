@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    /* background-image: url("EDLWeb.png"); */
+    background-color: #ebedf0;
+    height: 100vh;
+    width: 100% !important;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    background-attachment: fixed;
+    display: flex;
+    font-family: 'Noto Serif', serif;
+}
+
+.zoom {
+ transition: all 0.3s;
+}
+
+.zoom:hover {
+    transform: scale(1.15);
+}
+
+img {
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 30px;
+    width: 150px; 
+    height: 150px;
+}
+
+.animated-text {
+    font-size: 60px;
+    font-weight: 700;
+    /* min-width: 280px; */
+}
+
+.animated-text span {
+    position: relative;
+}
+
+.animated-text span:before {
+    content: "EDL SOFTWARE";
+    color: #3572d4;
+    animation: words 100s infinite;
+}
+
+.animated-text span:after {
+    content: "";
+    position: absolute;
+    width: calc(100% + 8px);
+    width: 0;
+    height: 100%;
+    background-color: #ebedf0;
+    border-left: #3572d4;
+    right: -8px;
+    animation: cursor .8s infinite, typing 100s steps(14) infinite;
+}
+
+@keyframes cursor {
+    to{
+        border-left: 2px solid #ff7f5000;
+    }
+}
+
+@keyframes words {
+    0%,100%{
+        content: "EDL SOFTWARE";
+    }
+    
+}
+
+@keyframes typing {
+    10%,15%,30%,35%,50%,55%,70%,75%,90%,95%{
+        width: 0;
+    }
+    5%,20%,25%,40%,45%,60%,65%,80%,85%{
+        width: calc(100% + 8px);
+    }
+}
+
+@media (max-width: 768px) {
+    .animated-text {
+        font-size: 40px;
+        font-weight: 700;
+        /* min-width: 280px; */
+    }
+
+    img {
+        box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        border-radius: 30px;
+        width: 100px; 
+        height: 100px;
+    }
+}
+
+@media (max-width: 850px) {
+    .animated-text {
+        font-size: 40px;
+        font-weight: 700;
+        /* min-width: 280px; */
+    }
+
+    img {
+        box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        border-radius: 30px;
+        width: 80px; 
+        height: 80px;
+    }
+}
+
+@media (max-width: 320px) {
+    .animated-text {
+        font-size: 35px;
+        font-weight: 700;
+        /* min-width: 280px; */
+    }
+
+    
+}
+
